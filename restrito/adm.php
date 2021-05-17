@@ -55,54 +55,59 @@
     </section>
 
     <section class="flex">
-        <div class="cartao">
+    <div class="cartao">
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text">Legal</p>
-                <h5 class="cd-title">Desc:</h5>
+                <hr>
                 <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
                 <a href="#" class="btn btn-primary" onClick="openModal()">Alterar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="#" class="btn btn-excluir">Excluir</a>
             </div>
         </div>
         <div class="cartao">
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text">Legal</p>
-                <h5 class="cd-title">Desc:</h5>
+                <hr>
                 <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
                 <a href="#" class="btn btn-primary" onClick="openModal()">Alterar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="#" class="btn btn-excluir">Excluir</a>
             </div>
         </div>
         <div class="cartao">
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text">Legal</p>
-                <h5 class="cd-title">Desc:</h5>
+                <hr>
                 <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
                 <a href="#" class="btn btn-primary" onClick="openModal()">Alterar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="#" class="btn btn-excluir">Excluir</a>
             </div>
         </div>
         <div class="cartao">
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text">Legal</p>
-                <h5 class="cd-title">Desc:</h5>
+                <hr>
                 <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
                 <a href="#" class="btn btn-primary" onClick="openModal()">Alterar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="#" class="btn btn-excluir">Excluir</a>
             </div>
         </div>
         <div class="cartao">
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text">Legal</p>
-                <h5 class="cd-title">Desc:</h5>
+                <hr>
                 <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
                 <a href="#" class="btn btn-primary" onClick="openModal()">Alterar</a>
-                <a href="#" class="btn btn-danger">Excluir</a>
+                <a href="#" class="btn btn-excluir">Excluir</a>
             </div>
         </div>
     </section>
@@ -130,15 +135,26 @@
                 <span class="close">&times;</span>
             </div>
             <form action="get" class="modal-form">
-                <label for="txtNome">Nome</label>
+                <h5 for="txtNome">Nome</h5>
                 <input type="text" name="nome" id="txtNome">
 
-                <label for="txtDesc">Descrição</label>
+                <h5 for="txtDesc">Descrição</h5>
                 <textarea name="Descricao" id="txtDesc" cols="30" rows="4"></textarea>
                 <button>Validar</button>
             </form>
         </div>
     </div>
+
+    <footer id="rodape-danylo">
+        <div>
+            <a href="index.html" id="logo">Translate</a>
+            <p>Etec de Guaianazes</p>
+        </div>
+        <div>
+            <p>© Copyright Translate.com 2021</p>
+        </div>
+
+    </footer>
 
     <script src="../js/modal.js"></script>
 

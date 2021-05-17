@@ -9,6 +9,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- bootstrap, se quiser ativar depois, ta bugando um pouco -->
     <link rel="stylesheet" href="css/Style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <script src="js/Js.js"></script>
     <title>Translate - Home</title>
 </head>
@@ -40,49 +41,63 @@
     </header>
 
     <section class="flex">
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
+    <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
             </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
+        </div>
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
             </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
+        </div>
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
             </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
+        </div>
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
             </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
+        </div>
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
             </div>
+        </div>
     </section>
 
-    
+    <footer id="rodape-danylo">
+        <div>
+            <a href="index.html" id="logo">Translate</a>
+            <p>Etec de Guaianazes</p>
+        </div>
+        <div>
+            <p>© Copyright Translate.com 2021</p>
+        </div>
+
+    </footer>
 
     
    
