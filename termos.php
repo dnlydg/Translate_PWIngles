@@ -14,6 +14,17 @@
 </head>
 
 <body>
+    <?php
+        include_once('global.php');
+        include_once('classes/Termo.php');
+        include_once('classes/Conexao.php');
+        try{
+            $termo = new Termo();
+            $listatermos = $termo->listar();
+        }catch(Exception $e){
+            echo 'Erro: '.$e->getMessage();
+        }
+    ?>
 
     <header id="header">
         <a href="index.php" id="logo">Translate</a>
@@ -40,47 +51,23 @@
     </header>
 
     <section class="flex">
+            <?php
+                $i = 0;
+                foreach ($listatermos as $linha){
+                    $i++;
+            ?>
             <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <div id="bodyModal" class="cd-body">
+                    <h5 class="cd-title">Termo</h5>
+                    <p class="cd-text"><?php echo $linha['nomeTermo'] ?></p>
+                    <h5 class="cd-title">Tradução</h5>
+                    <p class="cd-text"><?php echo $linha['descTermo'] ?></p>        
                 </div>
             </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
-            </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
-            </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
-            </div>
-            <div class="cartao">
-                <div class="cd-body">
-                    <h5 class="cd-title">Nome do Termo</h5>
-                    <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
-                    <p class="cd-text">Legal sasa sasas asasa sasasa </p>
-                </div>
-            </div>
-    </section>
+            <?php
+                }
+            ?>
+        </section>
 
     
 

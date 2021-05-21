@@ -38,6 +38,23 @@
             $stmt->execute();
         }
 
+        public function alterar($termo){
+            $conexao = Conexao::conectar();
+            $stmt = $conexao->prepare("UPDATE tbtermo SET nomeTermo = '?', descTermo = '?' WHERE idTermo = ?");
+            $stmt->bindParam(1, $termo->getNomeTermo());
+            $stmt->bindParam(2, $termo->getDescTermo());
+            $stmt->bindParam(3, $termo->getIdTermo());
+            $stmt->execute();
+        }
+
+        public function listar(){
+            $conexao = Conexao::conectar();
+            $querySelect = 'SELECT idTermo, nomeTermo, descTermo FROM tbtermo';
+            $resultado = $conexao->query($querySelect);
+            $lista = $resultado->fetchAll();
+            return $lista;
+        }
+
         public function deletar($idTermo){
             $conexao = Conexao::conectar();
             $stmt = $conexao->prepare("DELETE FROM tbtermo WHERE idTermo = ".$idTermo);
