@@ -9,6 +9,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- bootstrap, se quiser ativar depois, ta bugando um pouco -->
     <link rel="stylesheet" href="css/Style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <script src="js/Js.js"></script>
     <title>Translate - Home</title>
 </head>
@@ -69,7 +70,16 @@
             ?>
         </section>
 
-    
+    <footer id="rodape-danylo">
+        <div>
+            <a href="index.html" id="logo">Translate</a>
+            <p>Etec de Guaianazes</p>
+        </div>
+        <div>
+            <p>© Copyright Translate.com 2021</p>
+        </div>
+
+    </footer>
 
     
    

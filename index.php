@@ -1,4 +1,3 @@
-
 <html lang="en">
 
 <head>
@@ -9,6 +8,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- bootstrap, se quiser ativar depois, ta bugando um pouco -->
     <link rel="stylesheet" href="css/Style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <script src="js/Js.js"></script>
     <title>Translate - Home</title>
 </head>
@@ -28,9 +28,11 @@
                     <ul class="dropdown-menu dropdown" aria-labelledby="">
                         <form action="validacao.php" class="login" method="post">
                             <Label>Usuário</Label>
-                            <input type="text" name="txtlogin" id="txtlogin" class="login-text" placeholder="Insira seu usuário...">
+                            <input type="text" name="txtlogin" id="txtlogin" class="login-text"
+                                placeholder="Insira seu usuário...">
                             <Label>Senha</Label>
-                            <input type="text" name="txtsenha" id="txtsenha" class="login-text" placeholder="Sua Senha...">
+                            <input type="text" name="txtsenha" id="txtsenha" class="login-text"
+                                placeholder="Sua Senha...">
                             <button class="login-button">Entrar</button>
                         </form>
                     </ul>
@@ -51,12 +53,39 @@
         </div>
     </div>
 
+
+
     <main class="container" id="main">
+
+        <div class="termos-home">
+        <h2>Alguns Termos Para Você</h2>
+        <section class="flex">
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
+            </div>
+        </div>
+        <div class="cartao">
+            <div class="cd-body">
+                <h5 class="cd-title">Nome do Termo</h5>
+                <p class="cd-text">Legal</p>
+                <hr>
+                <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                <hr>
+            </div>
+        </div>
+        </section>
+        </div class='quem-somos'>
+
         <h2>Quem Somos</h2>
         <p>Somos uma startup brasileira pertencente a Etec de Guaianazes, e financiada pela Bifrost.</p>
         <h5>Início</h5>
         <p>Fundada em 2011, nossa empresa tem o objetivo de atender as pessoas que queriam pesquisar o
-            significado das palavras em inglês. Algo já existente no mercado, porém nós não queríamos seguir padrões, e
+            significado de termos em inglês. Algo já existente no mercado, porém nós não queríamos seguir padrões, e
             sim, criar novos padrões. Nós queríamos fazer algo que as pessoas não somente entendessem o significado
             daquela palavra, mas que aquilo realmente fosse guardado na cabeça do usuário de alguma forma, nós estamos
             sempre atualizando a nossa forma com que nós se comunicamos com o nosso cliente para que esse resultado seja
@@ -72,10 +101,28 @@
             empresa, a partir desses 10 anos de história que nó já temos. Nossa promessa é aprimorar ainda mais a
             acessibilidade ao inglês, e em um futuro próximo, adicionar outras linguas, inclusive o próprio português.
         </p>
+
+
     </main>
+
+
+    <footer id="rodape-danylo">
+        <div>
+            <a href="index.html" id="logo">Translate</a>
+            <p>Etec de Guaianazes</p>
+        </div>
+        <div>
+            <p>© Copyright Translate.com 2021</p>
+        </div>
+
+    </footer>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 
 </html>

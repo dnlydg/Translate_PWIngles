@@ -42,9 +42,10 @@
     <main class="exibirPesquisaMain">
 
         <section class="pesquisa">
-            <h1>Pesquise por mais termos</h1>
+            <h2>Pesquise por mais termos</h2>
+            <hr>
             <form>
-                <input type="text" id="txtBusca" placeholder="Insira a sua busca..." /> 
+                <input type="text" id="txtBusca" placeholder="Insira a sua busca..."/> 
                 <!--Danylo guei, vagabundo, eu ia fazer o auto-complete-->
                 <button id="pesquisar">&#xE71E</button>
             </form>
@@ -53,7 +54,8 @@
 
         <div class="titulo-pesquisa">
             <h2>Resultado da pesquisa</h2>
-            <h5>para: Legal</h5>
+            <h5>para: txtBusca</h5>
+            <hr>
         </div>
         
         
@@ -63,8 +65,9 @@
                 <div class="cd-body">
                     <h5 class="cd-title">Nome do Termo</h5>
                     <p class="cd-text">Legal</p>
-                    <h5 class="cd-title">Desc:</h5>
+                    <hr>
                     <p class="cd-text">Legal sasa sasas asasa sasasa </p>
+                    <hr>
                 </div>
             </div>
         </section>
@@ -74,7 +77,16 @@
     </main>
 
 
+    <footer id="rodape-danylo">
+        <div>
+            <a href="index.html" id="logo">Translate</a>
+            <p>Etec de Guaianazes</p>
+        </div>
+        <div>
+            <p>© Copyright Translate.com 2021</p>
+        </div>
 
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
