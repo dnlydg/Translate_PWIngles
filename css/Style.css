@@ -1,3 +1,480 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #FFF;
+  
+    --gray-50: #F7F8FA;
+    --gray-100: #E6E8EB;
+    --gray-200: #AFB2B1;
+    --gray-500: #808080;
+    --gray-800: #494D4B;
+  
+    --green-500: #04D361;
+    
+    --purple-300: #9F75FF;
+    --purple-400: #9164FA; 
+    --purple-500: #8257E5;
+    --purple-800: #6F48C9;
+
+    --orange-100: #f1c9a9;
+    --orange-500: #f38900;
+    --red-500: #be0b0b;
+
+    --blue-1: #766b88;
+    --blue-2: #38364a;
+    --blue-3: #2E2f45;
+    --blue-4: #2b89e0;
+
+
+
+  }
+
+    @media(max-width: 1080px) {
+        html {
+            font-size:93.75%;
+        }
+    }
+    @media(max-width: 720px) {
+        html {
+
+    font-size:87.5%;
+        }
+        #header{
+            padding-left:1rem;
+            padding-right:1rem;
+            
+            background-color:var(--blue-3);
+        }
+        .section-top{
+            background-image: none;
+            background-color:var(--blue-3);
+        }
+
+    }
+
+    h1, h2, h3, h4, h5, h6 , p {
+
+        font-weight:680;
+        font-family: Lexend, sans-serif;
+
+        margin-bottom: 1rem;
+        
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+
+
+    /*COMEÇO DO MENU*/
+
+    a{
+        position: relative;
+        color:var(--orange-500);
+        text-decoration:none;
+        font-family: Lexend, sans-serif;
+        transition: 0.5s;
+
+
+    }
+    a:after{
+
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        top: 100%;
+        left: 0;
+        background:var(--orange-500);
+        transition: transform 0.5s;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    
+    a:hover{
+
+        border-color:var(--orange-500);
+        color:var(--orange-100);
+
+    }
+
+    a:hover::after {
+
+        transform: scaleX(1);
+        transform-origin: left;
+
+    }
+
+    #logo{
+
+        font-weight: bold;
+        font-size: 1.5rem;
+       
+    }
+
+    #header{
+        background-color:var(--blue-3);
+        width:100%;
+        position:relative;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left:10%;
+        padding-right:10%;
+        height: 70px;
+        align-items:center;
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+    #menu{
+        padding-top: 1rem;
+        display:flex;
+        list-style: none;
+        gap: .5rem;
+    }
+
+    #menu a {
+
+        display:block;
+        padding: .5rem;
+
+    }
+
+    /* FORM DO LOGIN */
+
+    .login{
+        padding: 1rem;
+        color: var(--orange-500);
+        background-color:var(--blue-3);
+        
+    }
+    .dropdown-menu{
+        padding:0px;
+        border-radius: 15rem;
+        
+    }
+
+    .login-text{
+        border-style: none;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+
+    } 
+
+    .login-button{
+        width:100%;
+        border-style: none;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--orange-500);
+        color: var(--white);
+    }
+    
+
+
+
+
+    /*FINAL DO MENU*/
+
+
+    .section-top{
+        width:100%;
+        height:35rem;
+        overflow:hidden;
+        position:static;
+        background:var(--gray-200);
+        background-repeat: no repeat;
+        background-size:cover;
+        background-image: url(../images/wp2210341.jpg);
+    }
+    .content{
+    
+        position:absolute;
+        top:40%;
+        left:10%;
+        text-transform:capitalize;
+        
+    }
+    .content h1{
+        
+        color:var(--orange-500);
+        margin-bottom:.5rem;
+    
+    }
+    .content p{
+       color: var(--gray-800);
+       margin-bottom:.5rem;
+    }
+    #txtBusca {
+
+        width:80%;
+        border-style: none;
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        font-family: Lexend, sans-serif;
+        background-color: var(--white);
+
+    }
+    #pesquisar{
+        font-size: 0.9rem;
+        border: 0px solid var(--white);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-family: Segoe MDL2 Assets, sans-serif;
+        background-color: var(--white);
+    }
+    #pesquisar:hover{
+        opacity: 0.9;
+        transition-duration: 300ms;
+        background-color: var(--orange-500);
+        color:var(--white);
+    }
+
+    /* FIM DO BANNER */
+
+    #main {
+        padding: 5rem 3rem;  
+    }
+    #main p {
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    .termos-home{
+        margin-bottom: 4rem;
+        
+    }
+    .termos-home h2{
+        text-align: center;
+    }
+
+    .quem-somos img{
+        text-align: center;
+    }
+
+    /* FIM DO MAIN */
+
+
+    #rodape-danylo {
+        background-color: var(--blue-2);
+        color: var(--white);
+        padding: 2rem 10%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+    }
+    #rodape-danylo div:last-child{
+        padding-top: 2rem;
+    }
+      
+
+
+
+    /* FIM DA INDEX */
+
+    /* TERMOS */
+
+    .flex{
+
+        background-color: var(--white);
+        display:flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1000px;
+
+    }
+
+    .flex .cartao{
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-image: linear-gradient(to bottom, var(--gray-50) , var(--gray-100));
+        background-clip: border-box;
+        border: 1px solid var(--gray-50);
+        border-radius: 0.25rem;
+        flex: 1 1 400px;
+        margin: 10px;
+        transition: 0.7s;
+
+    }
+    .cartao:hover{
+        box-shadow: 0 0 0 0.30rem var(--gray-100);
+    }   
+
+    .cartao .cd-body{
+        flex: 1 1 auto;
+        padding: 4rem 3rem;
+    }
+    .cartao .cd-title{
+        
+        font-family: Lexend, sans-serif;
+        margin-bottom: 1rem;
+        color:var(--orange-500);
+        font-size: 1.25rem;
+        word-wrap: break-word;
+    }
+   .cartao .cd-text{
+    font-family: Lexend, sans-serif;
+       color:var(black);
+       word-wrap: break-word;
+       }
+
+
+
+    .btn-primary{
+        background-color:var(--gray-100);
+        word-wrap: break-word;
+        color: var(--blue-4);
+        
+    }
+
+    .btn-excluir{
+        background-color:var(--gray-100);
+        word-wrap: break-word;
+        color: var(--orange-500);
+        border-color:var(--orange-500);
+       
+    }
+
+    .btn-excluir:hover{
+        background-color:var(--orange-500);
+        color: #fff;
+    }
+
+    .btn-check:focus + .btn-excluir, .btn-excluir:focus {
+        color: #fff;
+        background-color: #f38900;
+        border-color: #f38900;
+        box-shadow: 0 0 0 0.25rem #f1c9a9;
+      }
+
+   /* MODAL */
+   
+
+    .modal {
+    display: none; 
+    position: flex; 
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+    backdrop-filter: blur(5px);
+    transition: 4s;
+    
+    }
+
+    
+    
+    .modal-content {
+        background-image: linear-gradient(to bottom, var(--gray-50) , var(--gray-100));
+        margin: 10% auto; 
+        padding: 2rem;
+        width: 60%; 
+        border-radius: 0.8rem;
+    }
+    @media(max-width: 720px) {
+        .modal-content {
+            width: 80%;
+            margin: 20% auto;
+        }
+    }
+    
+
+    .modal-form{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .modal-form h1,h5{
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        color: var(--gray-500);
+    }
+
+    .modal-form textarea,input{
+        background-color: rgba(0,0,0,0.0);
+        border-style: none;
+        border-bottom-style: solid;
+        border-color: var(--gray-500);
+    }
+    .modal-form button{
+        background-color: var(--blue-4);
+        border-style: none;
+        margin-top: 1rem;
+        color: var(--white);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+    }
+
+    
+
+    .modal-title {
+        display: flex;
+        justify-content:space-between;
+        color: #f38900;
+    }
+
+    .close {
+        color: var(--gray-200);
+        
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: var(--red-500);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+      /* Exibir Pesquisa */
+
+      .exibirPesquisaMain {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .titulo-pesquisa{
+        text-align: left;
+        padding-left: 4rem;
+    }
+
+    .exibirPesquisaMain .pesquisa {
+        padding: 4rem;
+        text-transform: capitalize;
+        text-align: left;
+    }
+
+
+    .pesquisa #txtBusca, #pesquisar{
+        border-style: solid;
+        border-color: var(--blue-3);
+    }
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap');
 * {
     margin: 0;
@@ -139,25 +616,27 @@ a:hover::after {
 
 /* FORM DO LOGIN */
 
-.login {
+.login{
     padding: 1rem;
     color: var(--orange-500);
-    background-color: var(--blue-3);
+    background-color:var(--blue-3);
+    
 }
-
-.dropdown-menu {
-    padding: 0px;
+.dropdown-menu{
+    padding:0px;
     border-radius: 15rem;
+    
 }
 
-.login-text {
+.login-text{
     border-style: none;
     border-radius: 0.5rem;
     padding: 0.3rem;
-}
 
-.login-button {
-    width: 100%;
+} 
+
+.login-button{
+    width:100%;
     border-style: none;
     margin-top: 0.5rem;
     padding: 0.5rem;
@@ -165,6 +644,8 @@ a:hover::after {
     background-color: var(--orange-500);
     color: var(--white);
 }
+
+
 
 
 /*FINAL DO MENU*/
@@ -242,56 +723,82 @@ a:hover::after {
 
 /* TERMOS */
 
-.flex {
-    background-color: var(--gray-50);
-    display: flex;
+.flex{
+
+    background-color: var(--white);
+    display:flex;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1000px;
+
 }
 
-.flex .cartao {
+.flex .cartao{
+
     position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: var(--blue-3);
+    background-image: linear-gradient(to bottom, var(--gray-50) , var(--gray-100));
     background-clip: border-box;
-    border: 1px solid var(--blue-3);
+    border: 1px solid var(--gray-50);
     border-radius: 0.25rem;
     flex: 1 1 400px;
     margin: 10px;
-}
+    transition: 0.7s;
 
-.cartao .cd-body {
+}
+.cartao:hover{
+    box-shadow: 0 0 0 0.30rem var(--gray-100);
+}   
+
+.cartao .cd-body{
     flex: 1 1 auto;
-    padding: 1rem 1rem;
+    padding: 4rem 3rem;
 }
-
-.cartao .cd-title {
+.cartao .cd-title{
+    
     font-family: Lexend, sans-serif;
-    margin-bottom: 0.5rem;
-    color: var(--orange-100);
+    margin-bottom: 1rem;
+    color:var(--orange-500);
+    font-size: 1.25rem;
+    word-wrap: break-word;
+}
+.cartao .cd-text{
+font-family: Lexend, sans-serif;
+   color:var(--gray-500);
+   word-wrap: break-word;
+   }
+
+
+
+.btn-primary{
+    background-color:var(--gray-100);
+    word-wrap: break-word;
+    color: var(--blue-4);
+    
 }
 
-.cartao .cd-text {
-    font-family: Lexend, sans-serif;
-    color: var(--gray-50);
+.btn-excluir{
+    background-color:var(--gray-100);
+    word-wrap: break-word;
+    color: var(--orange-500);
+    border-color:var(--orange-500);
+   
 }
 
-.btn-primary {
-    background-color: var(--blue-3);
+.btn-excluir:hover{
+    background-color:var(--orange-500);
+    color: #fff;
 }
 
-.btn-danger {
-    background-color: var(--orange-500);
-}
-
-.btn-danger:hover {
-    background-color: var(--blue-3);
-}
-
+.btn-check:focus + .btn-excluir, .btn-excluir:focus {
+    color: #fff;
+    background-color: #f38900;
+    border-color: #f38900;
+    box-shadow: 0 0 0 0.25rem #f1c9a9;
+  }
 
 /* MODAL */
 
@@ -386,3 +893,5 @@ input {
     border-style: solid;
     border-color: var(--blue-3);
 }
+
+/* sdfg */

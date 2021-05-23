@@ -28,7 +28,7 @@
             <a href="../index.php" id="logo">Translate</a>
             <nav id="nav">
                 <ul id="menu">
-                    <li><a href="termos.php">Termos</a></li>
+                    <li><a href="../termos.php">Termos</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle login" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Logout
@@ -79,10 +79,10 @@
                     $i++;
             ?>
             <div class="cartao">
-                <div id="bodyModal" class="cd-body">
-                    <h5 class="cd-title">Termo</h5>
+                <div class="cd-body">
+                    <h5 class="cd-title">Nome do Termo</h5>
                     <p class="cd-text"><?php echo $linha['nomeTermo'] ?></p>
-                    <h5 class="cd-title">Tradução</h5>
+                    <h5 class="cd-title">Desc:</h5>
                     <p class="cd-text"><?php echo $linha['descTermo'] ?></p>
                     <button type="button" class="btn btn-primary">
                         <?php
