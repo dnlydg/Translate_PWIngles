@@ -10,7 +10,6 @@
     <!-- bootstrap, se quiser ativar depois, ta bugando um pouco -->
     <link rel="stylesheet" href="css/Style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <script src="js/Js.js"></script>
     <title>Translate - Home</title>
 </head>
 
@@ -25,6 +24,12 @@
         }catch(Exception $e){
             echo 'Erro: '.$e->getMessage();
         }
+        if(isset($_POST['txtBusca'])){
+            $termoPesquisado = $_POST['txtBusca'];
+        }else{ 
+            $termoPesquisado = "";
+        }
+        
     ?>
 
     <header id="header">
@@ -39,6 +44,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown" aria-labelledby="">
                         <form action="validacao.php" class="login" method="post">
+                            
                             <Label>Usuário</Label>
                             <input type="text" name="txtlogin" id="txtlogin" class="login-text" placeholder="Insira seu usuário...">
                             <Label>Senha</Label>
@@ -60,7 +66,17 @@
             <div class="cartao">
                 <div id="bodyModal" class="cd-body">
                     <h5 class="cd-title">Termo</h5>
-                    <p class="cd-text"><?php echo $linha['nomeTermo'] ?></p>
+                    <input type="hidden" name="txtPegarID" id="txtPegarID" value="<?php echo @$_GET['idTermo']; ?>">
+                    <p <?php echo 'id=nomeTermo'.$i ?> class="cd-text"><?php echo $linha['nomeTermo'] ?></p>
+                    <script type="text/javascript">
+                        var i = "<?php echo $i ?>";
+                        var termoPesquisado = "<?php echo $termoPesquisado;?>";
+                        var termoLinha = "<?php echo $linha['nomeTermo'];?>";
+
+                        if(termoPesquisado == termoLinha){
+                            document.getElementById('nomeTermo'+i).style.backgroundColor = "#FDFF47";
+                        }
+                    </script>
                     <h5 class="cd-title">Tradução</h5>
                     <p class="cd-text"><?php echo $linha['descTermo'] ?></p>        
                 </div>
@@ -80,12 +96,15 @@
         </div>
 
     </footer>
-
     
-   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </body>
 
 </html>

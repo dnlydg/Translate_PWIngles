@@ -9,7 +9,6 @@
     <!-- bootstrap, se quiser ativar depois, ta bugando um pouco -->
     <link rel="stylesheet" href="css/Style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <script src="js/Js.js"></script>
     <title>Translate - Home</title>
 </head>
 
@@ -45,10 +44,13 @@
         <div class="content">
             <h1>Rapidez e praticidade</h1>
             <p>Busque termos em inglês mais rápido.</p>
-            <form>
-                <input type="text" id="txtBusca" placeholder="Insira a sua busca..." />
-                <button id="pesquisar">&#xE71E</button>
+            <form method="POST" action="termos.php">
+                <input type="text" id="txtBusca" name="txtBusca" placeholder="Insira a sua busca..." />
+                <button id="pesquisar" type="submit">&#xE71E</button>
             </form>
+            <div class="list-group div-lista-resultados" id="lista">
+                
+            </div>
 
         </div>
     </div>
@@ -123,6 +125,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#txtBusca").keyup(function(){
+                var procurarTexto = $(this).val();
+                if(procurarTexto != ''){
+                    $.ajax({
+                        url: 'procurar-termo.php',
+                        method: 'POST',
+                        data: {query:procurarTexto},
+                        success:function(resposta){
+                            $("#lista").html(resposta);
+                        }
+                    });
+                }
+                else{
+                    $("#lista").html('');
+                } 
+            });
+            $(document).on('click', '#link-lista', function(){
+                $("txtBusca").val($(this).text());
+                $("#lista").html('');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
