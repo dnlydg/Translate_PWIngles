@@ -30,6 +30,7 @@
         <nav id="nav">
             <ul id="menu">
                 <li><a href="../termos.php">Termos</a></li>
+                <li><a href="gerar-json.php">Gerar JSON</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle login" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,7 +92,7 @@
                 <button type="button" class="btn btn-primary">
                     <?php
                             echo "<a href='?idTermo={$linha['idTermo']}&nomeTermo={$linha['nomeTermo']}&descTermo={$linha['descTermo']}'>";
-                                echo "Selecionar este termo";
+                                echo "Alterar Termo";
                             echo "</a>";
                         ?>
 

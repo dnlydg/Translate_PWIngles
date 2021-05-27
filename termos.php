@@ -63,7 +63,7 @@
                 foreach ($listatermos as $linha){
                     $i++;
             ?>
-            <div class="cartao">
+            <div class="cartao" <?php echo 'id=cartao'.$i ?>>
                 <div id="bodyModal" class="cd-body">
                     <h5 class="cd-title">Termo</h5>
                     <input type="hidden" name="txtPegarID" id="txtPegarID" value="<?php echo @$_GET['idTermo']; ?>">
@@ -74,7 +74,10 @@
                         var termoLinha = "<?php echo $linha['nomeTermo'];?>";
 
                         if(termoPesquisado == termoLinha){
-                            document.getElementById('nomeTermo'+i).style.backgroundColor = "#FDFF47";
+                            document.getElementById('cartao'+i).style.borderStyle = "solid";
+                            document.getElementById('cartao'+i).style.borderColor = "#f38900";
+                            document.getElementById('nomeTermo'+i).style.color = "#f38900";
+                            document.getElementById('nomeTermo'+i).focus();
                         }
                     </script>
                     <h5 class="cd-title">Tradução</h5>
