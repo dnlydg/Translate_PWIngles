@@ -8,7 +8,7 @@
     $termo = new Termo();
     $lista = $termo->listar();
     foreach ($lista as $linha){
-        $json = json_encode($lista, JSON_PRETTY_PRINT);
+        $json = json_encode($lista, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     }
     echo $json;
     

@@ -51,7 +51,7 @@
             $conexao = Conexao::conectar();
             $querySelect = 'SELECT idTermo, nomeTermo, descTermo FROM tbtermo';
             $resultado = $conexao->query($querySelect);
-            $lista = $resultado->fetchAll();
+            $lista = $resultado->fetchAll(PDO::FETCH_ASSOC);
             return $lista;
         }
 

@@ -87,7 +87,7 @@
             <div class="cd-body">
                 <h5 class="cd-title">Nome do Termo</h5>
                 <p class="cd-text"><?php echo $linha['nomeTermo'] ?></p>
-                <h5 class="cd-title">Desc:</h5>
+                <h5 class="cd-title">Tradução</h5>
                 <p class="cd-text"><?php echo $linha['descTermo'] ?></p>
                 <button type="button" class="btn btn-primary">
                     <?php
